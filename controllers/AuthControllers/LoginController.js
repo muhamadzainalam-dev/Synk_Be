@@ -67,7 +67,7 @@ const LoginController = async (req, res) => {
       httpOnly: true,
       secure: true,
       sameSite: "none",
-      path: "/verifyotp",
+      path: "/",
       maxAge: 60 * 1000,
     })
     .status(200)
