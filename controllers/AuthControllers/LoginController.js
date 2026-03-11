@@ -65,8 +65,8 @@ const LoginController = async (req, res) => {
   res
     .cookie("tempToken", tempToken, {
       httpOnly: true,
-      secure: false,
-      sameSite: "lax",
+      secure: true,
+      sameSite: "none",
       path: "/verifyotp",
       maxAge: 60 * 1000,
     })
