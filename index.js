@@ -13,7 +13,11 @@ const server = express();
 dotenv.config();
 server.use(
   cors({
-    origin: ["http://localhost:5173", "https://synk-fe.vercel.app"],
+    origin: [
+      "http://192.168.100.22:5173",
+      "http://localhost:5173",
+      "https://synk-fe.vercel.app",
+    ],
     credentials: true,
   }),
 );

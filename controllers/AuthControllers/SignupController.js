@@ -51,7 +51,7 @@ const SignupController = async (req, res) => {
   await newUser.save();
 
   // Send OTP To User
-  NodeMailer(email, Generated_OTP);
+  // NodeMailer(email, Generated_OTP);
 
   // Generating tempToken
   const tempToken = jwt.sign({ email }, JWT_SECRET_KEY, { expiresIn: "1m" });
