@@ -47,7 +47,7 @@ const LoginController = async (req, res) => {
   const Generated_OTP = Math.floor(100000 + Math.random() * 900000);
 
   // Send OTP To User
-  NodeMailer({ recipientEmail: email, otp: Generated_OTP });
+  await NodeMailer({ recipientEmail: email, otp: Generated_OTP });
 
   // Updating OTP
   const existingUser = isUserExisted;
