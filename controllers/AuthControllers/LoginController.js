@@ -37,7 +37,7 @@ const LoginController = async (req, res) => {
   const passwordMatch = bcrypt.compareSync(password, userHashedPassword);
 
   // If Password Is Wrong
-  if (!passwordMatch) {
+  if (passwordMatch == false) {
     return res.status(401).json({
       message: "Incorrect password. Please try again.",
     });
@@ -45,9 +45,6 @@ const LoginController = async (req, res) => {
 
   // Generate OTP
   const Generated_OTP = Math.floor(100000 + Math.random() * 900000);
-
-  // Send OTP To User
-  await NodeMailer({ recipientEmail: email, otp: Generated_OTP });
 
   // Updating OTP
   const existingUser = isUserExisted;
@@ -57,6 +54,9 @@ const LoginController = async (req, res) => {
   existingUser.verified = false;
 
   await existingUser.save();
+
+  // Send OTP To User
+  // NodeMailer(email, Generated_OTP);
 
   // Generating tempToken
   const tempToken = jwt.sign({ email }, JWT_SECRET_KEY, { expiresIn: "1m" });

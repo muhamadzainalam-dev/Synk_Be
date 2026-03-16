@@ -4,10 +4,12 @@ import express from "express";
 import SignupController from "../controllers/AuthControllers/SignupController.js";
 import LoginController from "../controllers/AuthControllers/LoginController.js";
 import VerifyOTPController from "../controllers/AuthControllers/VerifyOTPController.js";
+import Logout from "../controllers/AuthControllers/Logout.js";
 
 // Auth Middlewares
 import verifyUser from "../middlewares/AuthMiddleware.js";
 import isAuthorized from "../middlewares/IsAuthorized.js";
+import GoogleLogin from "../controllers/AuthControllers/GoogleLogin.js";
 
 // User Imports
 import GetUser from "../controllers/UserControllers/GetUserController.js";
@@ -31,6 +33,8 @@ const router = express.Router();
 router.post("/signup", isAuthorized, SignupController);
 router.post("/login", isAuthorized, LoginController);
 router.post("/verifyotp", isAuthorized, VerifyOTPController);
+router.post("/googlelogin", GoogleLogin);
+router.post("/logout", Logout);
 
 // Get User
 router.get("/getuser", verifyUser, GetUser);
