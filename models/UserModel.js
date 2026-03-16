@@ -8,7 +8,7 @@ const UserSchema = new Schema({
   user_Name: { type: String, required: true },
   password: { type: String, required: true },
   media_Key: { type: String },
-  OTP: { type: String, required: true },
+  OTP: { type: String },
   OTP_Limit: { type: Date, default: Date.now },
   verified: { type: Boolean, default: false },
   joined_At: { type: Date, default: Date.now },

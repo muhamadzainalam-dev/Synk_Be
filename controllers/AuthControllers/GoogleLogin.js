@@ -49,8 +49,6 @@ const GoogleLogin = async (req, res) => {
         email,
         user_Name,
         password: "ThisUserIsUsingThirdPartyAuth",
-        OTP: undefined,
-        OTP_Limit: undefined,
         verified: true,
       });
 
