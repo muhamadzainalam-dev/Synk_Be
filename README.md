@@ -1,34 +1,33 @@
-# SocialMediaApp – Backend API (SocialMediaApp-Be)
+# SocialMediaApp – Backend
 
-[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
-[![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Redux Toolkit](https://img.shields.io/badge/Redux_Toolkit-State-764ABC?style=for-the-badge&logo=redux&logoColor=white)](https://redux-toolkit.js.org/)
-[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![React Router](https://img.shields.io/badge/React_Router-7-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white)](https://reactrouter.com/)
+[![Node.js](https://img.shields.io/badge/Node.js-Backend-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express-5-black?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Mongoose-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://mongoosejs.com/)
+[![AWS S3](https://img.shields.io/badge/AWS-S3-FF9900?style=for-the-badge&logo=amazonaws&logoColor=black)](https://aws.amazon.com/s3/)
+[![Cloudinary](https://img.shields.io/badge/Cloudinary-Media-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white)](https://cloudinary.com/)
 
-Frontend web app for the SocialMedia platform with responsive UI and API-driven flows.
+Backend REST APIs for authentication + media handling, built for low-latency client integration.
 
-> 🔗 **Backend Repo:** `muhamadzainalam-dev/SocialMediaApp-Fe`  
-> `https://github.com/muhamadzainalam-dev/SocialMediaApp-Fe`
+> 🔗 **Frontend Repo:** `muhamadzainalam-dev/SocialMediaApp-Be`  
+> `https://github.com/muhamadzainalam-dev/SocialMediaApp-Be`
 
 ---
 
 ## 💼 Skills & Tech Used
 
-**From `package.json` dependencies**
-- **UI:** React, React DOM  
-- **Build Tooling:** Vite, `@vitejs/plugin-react`  
-- **Styling:** Tailwind CSS, `@tailwindcss/vite`, `tailwind-scrollbar-hide`  
-- **State Management:** Redux Toolkit, React Redux  
-- **Routing:** React Router DOM  
-- **Forms:** React Hook Form  
-- **Networking:** Axios  
-- **Animations:** Framer Motion  
-- **Icons/UI libs:** React Icons, Lucide React, FontAwesome  
-- **Google Auth:** `@react-oauth/google`, `react-use-googlelogin`  
-- **Code Quality:** ESLint (+ react hooks/refresh plugins)
+- **Server:** Express  
+- **Database:** MongoDB (Mongoose)  
+- **Auth/Security:** JWT (`jsonwebtoken`), password hashing (`bcrypt`)  
+- **Email:** Nodemailer   
+- **Cloud Storage:** AWS S3 SDK + Presigned URLs (`@aws-sdk/client-s3`, `@aws-sdk/s3-request-presigner`)  
+- **HTTP & Config:** Axios, dotenv  
+- **Middleware:** cookie-parser, cors  
+
+**Also used**
+- **AbstractAPI Email Verifier:** Axios integration using `ABSTRACT_API_KEY` (Abstract Email Reputation/Verification API)
 
 ---
+
 ## 🚀 Run Locally
 
 ```bash
